@@ -1,0 +1,11 @@
+# Go build output
+*.exe
+*.test
+*.out
+/ski-verleih/skiverleih
+/fahrrad-verleih/fahrradverleih
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store

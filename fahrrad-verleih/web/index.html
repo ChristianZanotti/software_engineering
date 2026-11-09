@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verleih</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚲</text></svg>">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#dashboard" id="brand">Verleih</a>
+    <button class="burger" aria-label="Menü" onclick="document.body.classList.toggle('nav-open')">☰</button>
+    <nav>
+      <a href="#dashboard" data-page="dashboard">Dashboard</a>
+      <a href="#items" data-page="items" id="nav-items">Artikel</a>
+      <a href="#persons" data-page="persons">Personen</a>
+      <a href="#rentals" data-page="rentals">Ausleihen</a>
+      <a href="#prices" data-page="prices">Preise</a>
+    </nav>
+  </header>
+
+  <main id="app" class="container" aria-live="polite"></main>
+
+  <dialog id="modal">
+    <form method="dialog" id="modal-form" novalidate>
+      <header class="modal-head">
+        <h2 id="modal-title"></h2>
+        <button type="button" class="icon-btn" data-close aria-label="Schließen">✕</button>
+      </header>
+      <div id="modal-body"></div>
+      <p id="modal-error" class="form-error" hidden></p>
+      <footer class="modal-foot">
+        <button type="button" class="btn btn-ghost" data-close>Abbrechen</button>
+        <button type="submit" class="btn btn-primary" id="modal-submit">Speichern</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <div id="toasts" aria-live="assertive"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
